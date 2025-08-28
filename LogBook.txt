@@ -1,0 +1,106 @@
+🗓️ Log Book: Deep Fake Detection (Work in Progress)
+Duration: 5 Feb 2025 – 21 Apr 2025
+Status: Ongoing Development
+
+✅ 5 – 10 Feb 2025
+📌 Project Initialization
+
+Defined project scope: DeepFake detection using machine learning.
+
+Explored recent research papers and GitHub repos for references.
+
+Created the initial Jupyter notebook and set up a virtual environment.
+
+✅ 11 – 17 Feb 2025
+📁 Dataset Exploration
+
+Reviewed datasets: FaceForensics++, DFDC, Celeb-DF.
+
+Downloaded partial data from FaceForensics++ for testing.
+
+Began writing preprocessing scripts (frame extraction and resizing).
+
+✅ 18 – 24 Feb 2025
+🧪 Basic Model Setup
+
+Implemented a basic CNN to test feasibility on static image frames.
+
+Trained initial model on limited data; accuracy not satisfactory.
+
+Identified need for better preprocessing and larger data split.
+
+✅ 25 Feb – 2 Mar 2025
+🔄 Preprocessing Improvements
+
+Wrote scripts to automate frame extraction from videos.
+
+Applied face detection and alignment on extracted frames.
+
+Started annotating samples for better ground truth consistency.
+
+✅ 3 – 10 Mar 2025
+🧠 Model Experimentation (Still Testing)
+
+Experimented with ResNet and MobileNet for feature extraction.
+
+Implemented augmentation (flipping, brightness, blur).
+
+Results vary; models overfitting due to small data size.
+
+✅ 11 – 18 Mar 2025
+⚙️ Data Management + Evaluation
+
+Added confusion matrix, classification report.
+
+Logged predictions and started plotting Grad-CAM visualizations.
+
+Still validating outputs; not consistent across all samples.
+
+✅ 19 – 27 Mar 2025
+🔍 Model Refinement
+
+Integrated frame-based majority voting logic for video classification.
+
+Explored using LSTM on frame sequence outputs – still in progress.
+
+Evaluated performance on unseen video samples.
+
+✅ 28 Mar – 4 Apr 2025
+🛠️ Pipeline Work (Ongoing)
+
+Worked on end-to-end pipeline: video input → frame extraction → detection.
+
+Minor bugs in prediction loop and frame alignment (not fully resolved).
+
+Planning to test newer CNN + LSTM structure.
+
+✅ 5 – 12 Apr 2025
+🧪 Debugging + Feature Improvements
+
+Fine-tuned frame prediction thresholds.
+
+Began restructuring code for modular execution.
+
+Started documenting functions for reproducibility.
+
+✅ 13 – 21 Apr 2025
+🧾 Work in Progress
+
+LSTM-based architecture not yet finalized.
+
+Model accuracy still unstable on long/low-quality videos.
+
+Planning to explore 3D CNNs or Transformers in upcoming weeks.
+
+Finalizing experiment logs and preparing mid-progress presentation.
+
+🔄 Next Steps (Post 21 April):
+
+Expand training on full FaceForensics++ dataset.
+
+Finalize model architecture (consider 3D CNNs or ViTs).
+
+Build and deploy minimal web interface.
+
+Performance benchmarking and report writing.
+
