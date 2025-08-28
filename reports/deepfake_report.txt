@@ -1,0 +1,9 @@
+DeepFake Detection Report
+=========================
+Status: Real
+Confidence Score: 0.3822
+
+Techniques employed:
+- CNN Facial Analysis
+- Frame-by-Frame Temporal Consistency
+- Dlib Face Detection

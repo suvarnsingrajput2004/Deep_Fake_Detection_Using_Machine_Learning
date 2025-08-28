@@ -1,0 +1,7 @@
+Flask
+opencv-python
+dlib
+tensorflow
+numpy
+scipy
+ffmpeg-python
