@@ -104,3 +104,54 @@ Build and deploy minimal web interface.
 
 Performance benchmarking and report writing.
 
+📅 15 – 22 July 2025
+
+Flask Web App Setup (In Progress)
+
+Started Flask-based backend for DeepFake detection.
+
+Implemented video upload route (basic testing stage).
+
+Linked preprocessing functions (frame extraction, face detection).
+
+📅 23 – 31 July 2025
+
+Frontend Development (Ongoing)
+
+Designed simple HTML/CSS upload interface.
+
+Integrated “Upload & Analyze” button (initial testing).
+
+Still improving connection between frontend and backend.
+
+📅 1 – 10 August 2025
+
+CNN Model Integration (Under Progress)
+
+Connected custom CNN model with Flask backend.
+
+Detection logic implemented for frame-wise analysis.
+
+Report generation module drafted but not finalized.
+
+📅 11 – 18 August 2025
+
+Testing & Debugging (In Progress)
+
+Conducted test runs on small video samples.
+
+Encountered minor bugs in prediction loop.
+
+Model accuracy not yet stable, thresholds still tuning.
+
+📅 19 – 23 August 2025
+
+Deployment Preparation (Work Ongoing)
+
+Integrated full pipeline (Upload → Frame Extraction → Detection).
+
+Added basic UI improvements (background image, layout).
+
+Still refining results display & improving CNN accuracy. 
+
+
