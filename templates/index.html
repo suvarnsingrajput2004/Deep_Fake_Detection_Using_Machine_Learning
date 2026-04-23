@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepFake Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Face-Swap DeepFake Detection</h1>
+        <p class="subtitle">Multi-Model Ensemble with Temperature-Calibrated Confidence</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="media" accept="video/*,image/*" required>
+            <button type="submit">Upload &amp; Analyze</button>
+        </form>
+
+        {% if result %}
+        <div class="result {{ 'fake' if result['status'] == 'Fake' else 'real' }}">
+            <h2>{{ result["status"] }}</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <span class="label">Confidence</span>
+                    <span class="value">{{ "%.2f"|format(result["confidence"] * 100) }}%</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Fake Score</span>
+                    <span class="value">{{ "%.4f"|format(result["fake_score"]) }}</span>
+                </div>
+                <div class="metric">
+                    <span class="label">FFT Artifact Score</span>
+                    <span class="value">{{ "%.4f"|format(result.get("fft_artifact_score", 0)) }}</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Frames/Faces Analyzed</span>
+                    <span class="value">{{ result["frames_analyzed"] }}</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Models Used</span>
+                    <span class="value">{{ result.get("models_used", 1) }}</span>
+                </div>
+            </div>
+            <p class="report-link"><strong>Report:</strong> {{ report_path }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

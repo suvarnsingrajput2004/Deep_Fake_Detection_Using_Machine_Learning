@@ -1,0 +1,20 @@
+DeepFake Detection Report
+==================================================
+
+Status:              Real
+Fake Score:          0.0462
+Confidence Score:    0.9538 (95.4%)
+FFT Artifact Score:  0.0651
+Frames Analyzed:     2
+Models Used:         1
+
+Techniques Employed:
+----------------------------------------
+- Multi-Model Ensemble (XceptionNet, MobileNetV2, ResNet50V2,
+  EfficientNetB0, CNN-LSTM, GAN Discriminator, ViT)
+- Weighted Ensemble Voting (by validation accuracy)
+- Temperature Scaling Calibration
+- MTCNN Face Detection
+- FFT Frequency Domain Analysis
+- Focal Loss Training
+- Frame-by-Frame Aggregation
